@@ -1,13 +1,13 @@
+import React from 'react'
 import './index.css';
-import { Provider } from 'react-redux';
-import appStore from './store/appStore';
+import Product from './components/Products';
 
-function App() {
+const App = () => {
   return (
-    <Provider store={appStore}>
-      <h1>Hello</h1>
-    </Provider>
-  );
+    <h1 className="">
+      <Product/>
+    </h1>
+  )
 }
 
-export default App;
+export default App
