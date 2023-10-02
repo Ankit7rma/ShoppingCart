@@ -3,12 +3,13 @@ import './index.css';
 import Product from './components/Products';
 import { Provider } from 'react-redux';
 import appStore from './components/store/appStore';
+import AppLayout from './components/AppLayout';
 
 const App = () => {
   return (
     <Provider store={appStore}>
        <h1 className="">
-      <Product/>
+      <AppLayout/>
     </h1>
     </Provider>
    
