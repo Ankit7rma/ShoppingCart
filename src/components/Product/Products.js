@@ -21,7 +21,7 @@ const Products = () => {
   return (
     <div className=' grid grid-cols-4 items-center justify-center'> 
     {pdt.product?.map((p)=>{
-      return(<p><ProductCard key={p.id} image={p.image} title={p.title} description={p.description} price={p.price}/></p>)})}
+      return(<p><ProductCard key={p.id} id={p.id} image={p.image} title={p.title} description={p.description} price={p.price}/></p>)})}
     </div>
   )
 }
