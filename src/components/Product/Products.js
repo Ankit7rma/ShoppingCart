@@ -23,7 +23,7 @@ const Products = () => {
           dispatch(addToCart(p))
         }
   return (
-    <div className='  grid grid-cols-4 items-center justify-center'> 
+    <div className='  flex flex-wrap justify-evenly'> 
     {pdt.product?.map((p)=>{
       return(<><div className='flex flex-col justify-center items-center'><ProductCard key={p.id} id={p.id} image={p.image} title={p.title} description={p.description} price={p.price}/>
       <button className='bg-red-300 hover:bg-blue-700 border w-[50%] border-gray-500 rounded-lg p-2 ' onClick={()=>{handleClick(p)}}>
