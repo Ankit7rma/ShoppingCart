@@ -1,7 +1,9 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link, Outlet } from 'react-router-dom'
 
 const Header = () => {
+  const items = useSelector(store=>store.cart.items)
   return (
     <div>
     <nav className=' flex justify-between align-center ml-2 pl-2 bg-red-100 rounded-lg'>
@@ -10,7 +12,7 @@ const Header = () => {
         <Link to="/" className='p-2 mr-4' >Home</Link>
         <Link to="cart" className='flex'>
             <img className='w-8 h-8 rounded-lg' 
-             src='https://media.istockphoto.com/id/1184670036/vector/shopping-cart-line-icon-fast-buy-vector-logo.jpg?s=612x612&w=0&k=20&c=zyExmQoKgH4UZTwMa41Zo9x1TzQYcQy_5zQcHaEL0SQ=' alt='cart-logo' />{"0"}
+             src='https://media.istockphoto.com/id/1184670036/vector/shopping-cart-line-icon-fast-buy-vector-logo.jpg?s=612x612&w=0&k=20&c=zyExmQoKgH4UZTwMa41Zo9x1TzQYcQy_5zQcHaEL0SQ=' alt='cart-logo' />{items.length}
         </Link>
         </div>
     </nav>
