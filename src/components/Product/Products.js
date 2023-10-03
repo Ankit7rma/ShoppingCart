@@ -26,7 +26,7 @@ const Products = () => {
     <div className='  grid grid-cols-4 items-center justify-center'> 
     {pdt.product?.map((p)=>{
       return(<><div className='flex flex-col justify-center items-center'><ProductCard key={p.id} id={p.id} image={p.image} title={p.title} description={p.description} price={p.price}/>
-      <button className='bg-red-300 border w-[50%] border-gray-500 rounded-lg p-2 ' onClick={()=>{handleClick(p)}}>
+      <button className='bg-red-300 hover:bg-blue-700 border w-[50%] border-gray-500 rounded-lg p-2 ' onClick={()=>{handleClick(p)}}>
     Add to Cart</button></div>
       </>)})}
     </div>
